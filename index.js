@@ -4,6 +4,7 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
 var app = express();
+var Router = require('./routes/planner');
 // var wikiRouter = require('./routes/wiki');
 // var usersRouter = require('./routes/users');
 
@@ -20,12 +21,16 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/node_modules'));
 app.use(express.static(__dirname + '/public'));
 
-// app.use('/wiki', wikiRouter);
+app.use('/', Router);
 // app.use('/users', usersRouter);
 
 // app.get('/', function (req, res) {
 //     res.redirect('/wiki');
 // });
+
+app.listen(3000, function(req, res){
+    console.log('listening on port 3000');
+});
 
 // 404
 app.use(function (req, res, next) {

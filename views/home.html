@@ -20,29 +20,68 @@
               <div class="form-group">
                 <label for="HotelName" class="col-sm-2 control-label">Hotels</label>
                 <div class="col-sm-10">
-                <input name="HotelName" type="text" class="form-control"/>
+                <select name="HotelName" class="form-control" id="hotel">
+                  {% for hotel in hotels %}
+                  <option>{{hotel.name}}</option>
+                  {% endfor %}
+                </select>
+                <button id="b1" class="btn add-more" type="button" onclick="pickHotel()">+</button>
+              
                 </div>
               </div>
 
              <div class="form-group">
                 <label for="RestaurantsName" class="col-sm-2 control-label">Restaurants</label>
                 <div class="col-sm-10">
-                <input name="RestaurantsName" type="text" class="form-control"/>
+
+                <select name="RestaurantName" class="form-control" id="restaurant">
+                  {% for restaurant in restaurants %}
+                  <option>{{restaurant.name}}</option>
+                  {% endfor %}
+                </select>
+                <button id="b2" class="btn add-more" type="button" onclick="pickRestaurant()">+</button>
+              
+              
                 </div>
               </div>
 
              <div class="form-group">
                 <label for="ActivitiesName" class="col-sm-2 control-label">Activities</label>
                 <div class="col-sm-10">
-                <input name="ActivitiesName" type="text" class="form-control"/>
+
+                <select name="ActivitiesName" class="form-control" id="activities">
+                  {% for activity in activities %}
+                  <option>{{activity.name}}</option>
+                  {% endfor %}
+
+                </select>
+                <button id="b3" class="btn add-more" type="button" onclick="pickActivities()">+</button>
+      
                 </div>
               </div>
 
             </form>
 
+          </div><!--options -->
+
+
+          <div class="results">
+          <ul>
+            <li>
+              <h1>My Hotel</h1>
+                <ul id="hotelpicked"></ul>
+
+            </li>
+            <li><h1>My Restaurants</h1>
+              <ul id="restaurantpicked"></ul>
+            </li>
+
+            <li><h1>My Activities</h1>
+              <ul id="activitiespicked"></ul>
+            </li>
+          </ul>
           </div>
         </div>
-
 
       </div><!-- /.row -->
 
