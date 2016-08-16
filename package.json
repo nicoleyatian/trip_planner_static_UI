@@ -1,0 +1,26 @@
+{
+  "name": "trip_planner_static_ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:production": "node index.js",
+    "start:dev": "nodemon -e html,css,js index.js",
+    "start": "npm run start:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darellkoh/trip_planner_static_UI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darellkoh/trip_planner_static_UI/issues"
+  },
+  "homepage": "https://github.com/darellkoh/trip_planner_static_UI#readme"
+}
